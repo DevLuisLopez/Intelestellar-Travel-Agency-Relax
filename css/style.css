@@ -1351,6 +1351,14 @@ textarea.form-control {
         .pb_offcanvas-nav_v1 .pb_main-nav li a.active {
           text-decoration: underline; }
 
+.colortittle{
+            font-family: 'Azonix', 'Arial Narrow', Arial, sans-serif;
+            color: #ededed !important;
+        }
+.colortext {
+  color: #ededed !important;
+}        
+
 .pb_offcanvas-header_v1 {
   padding-top: 40px;
   z-index: 2;
@@ -1368,3 +1376,4 @@ textarea.form-control {
     @media (max-width: 767.98px) {
       .pb_offcanvas-header_v1 .pb_toggle-menu {
         top: 13px; } }
+        
