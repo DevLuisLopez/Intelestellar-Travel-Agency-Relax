@@ -466,7 +466,7 @@ textarea.form-control {
   padding-bottom: 30px; }
 
 .owl-carousel.major-caousel .slider-item {
-  height: 70vh;
+  /* height: 70vh; */
   min-height: inherit; }
   .owl-carousel.major-caousel .slider-item img {
   width: 700px;
