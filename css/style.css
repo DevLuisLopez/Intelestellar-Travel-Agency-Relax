@@ -1352,9 +1352,12 @@ textarea.form-control {
           text-decoration: underline; }
 
 .colortittle{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: #ccc !important;
+            font-family: 'Azonix', 'Arial Narrow', Arial, sans-serif;
+            color: #ededed !important;
         }
+.colortext {
+  color: #ededed !important;
+}        
 
 .pb_offcanvas-header_v1 {
   padding-top: 40px;
