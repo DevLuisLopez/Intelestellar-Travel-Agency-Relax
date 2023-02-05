@@ -299,8 +299,11 @@
 /* Funciones - Formulario */
 
 // Función - Seleccionar compañia
-function seleccionaCompania(idCompania){
-
+function seleccionaCompania(id){
+  $('#' + id).removeClass('btn-primary');
+  $('#' + id).addClass('btn-success');
+  $('#' + id).html('Seleccionar<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
+  $('#btn-continuar-seleccion-destino').removeAttr('disabled');
 }
 
 // Función - Buscar tipo de viaje
