@@ -1381,6 +1381,10 @@ textarea.form-control {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+.img-carrusel{
+  height: 300px;
+}
+
 .img-seccion{
   height: 200px;  
 }
