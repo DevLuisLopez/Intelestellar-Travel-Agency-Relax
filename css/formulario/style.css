@@ -1,5 +1,9 @@
 /*--------------* Formulario *--------------*/
 
+.pb_navbar.scrolled {
+    position: relative;
+}
+
 .panel {
     background-color: #f5f5f5;
     border-radius: 10px;
@@ -17,6 +21,16 @@
     display: block;
 }
 
+.btn.btn-primary {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn.btn.btn-primary:hover {
+    background-color: #d90000;
+    border-color: #cc0000;
+}
+
 #btn-continuar {
     width: auto;
 }
@@ -24,7 +38,7 @@
 /* Breadcrumb */
 
 .breadcrumb-item.active {
-    color: #0d6efd;
+    color: #ff0000 !important;
 }
 
 /* Filtros */
@@ -426,7 +440,9 @@ ol {
 
 /* Forma pago */
 
-/* Animación */
+/* Animación - GIF */
+
+/* Animación - Rocket */
 
 svg#approved { margin: 20px 20px 10px; width: 300px; }
 #approved {
@@ -492,6 +508,19 @@ svg#approved { margin: 20px 20px 10px; width: 300px; }
 
 #detalle-formas-pago {
     height: auto;
+}
+
+.gif-carga {
+    display: block;
+}
+
+.gif-carga .spinner-grow {
+    width: 100px;
+    height: 100px;
+}
+
+.aviso-confirmacion {
+    display: none;
 }
 
 /*------------------------------------------*/
