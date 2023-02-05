@@ -1,0 +1,497 @@
+/*--------------* Formulario *--------------*/
+
+.panel {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.icn-green {
+    color: green;
+}
+
+.seccion-formulario {
+    display: none;
+}
+
+.seccion-formulario#seleccion-destino {
+    display: block;
+}
+
+#btn-continuar {
+    width: auto;
+}
+
+/* Breadcrumb */
+
+.breadcrumb-item.active {
+    color: #0d6efd;
+}
+
+/* Filtros */
+
+#filtros-destino .contenedor-filtros {
+    height: 130px;
+}
+
+#filtros-destino #campos-destinos,
+#filtros-destino #campos-fechas {
+    border-right: 1px solid gray;
+}
+
+/* Seleccion destino */
+
+
+
+/* Seleccion compañia */
+
+#carouselCompanies .carousel-item img {
+    height: 500px;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Tipo viaje */
+
+#contenedor-tipos-viaje .card .contenedor-boton {
+    position: relative;
+    bottom: 55px;
+}
+
+/* Seleccion asientos */
+
+.contenedor-asientos {
+    /* display: none; */
+    display: block;
+    overflow: hidden;
+}
+
+.contenedor-asientos#contenedor-asiento-nave {
+    display: block;
+}
+
+.contenedor-asientos#contenedor-teletransportacion{
+    overflow: inherit;
+}
+
+/* Nave normal */
+.plane {
+    margin: auto;
+    max-width: 300px;
+}
+
+.cockpit {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 5px solid #d8d8d8;
+}
+
+.cockpit:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    border-radius: 50%;
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+}
+
+.exit {
+    position: relative;
+    height: 50px;
+}
+
+.exit:before,
+.exit:after {
+    content: "EXIT";
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0px 2px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    display: block;
+    position: absolute;
+    background: green;
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.exit:before {
+    left: 0;
+}
+
+.exit:after {
+    right: 0;
+}
+
+.fuselage {
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+    border-bottom: 5px solid #d8d8d8;
+}
+
+.motors {
+    height: 300px;
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+    border-bottom: 5px solid #d8d8d8;
+}
+
+.motors .left,
+.motors .right,
+.motors .bottom  {
+    background-color: #d8d8d8;
+    position: relative;
+}
+
+.motors .left {
+    /* width: 5px;
+    height: 418px;
+    transform: rotate(45deg);
+    top: -58px;
+    left: -152px; */
+    width: 5px;
+    height: 324px;
+    transform: rotate(20deg);
+    top: -15px;
+    left: -60px;
+}
+
+.motors .right {
+    /* width: 5px;
+    height: 420px;
+    transform: rotate(-45deg);
+    bottom: 477px;
+    left: 438px; */
+    width: 5px;
+    height: 324px;
+    transform: rotate(-20deg);
+    bottom: 338px;
+    left: 346px;
+}
+
+.motors .bottom {
+    /* width: 305%;
+    height: 5px;
+    left: -102%;
+    bottom: 184%; */
+    width: 178%;
+    height: 5px;
+    left: -39%;
+    bottom: 119.5%;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.seat {
+    display: flex;
+    flex: 0 0 14.28571428571429%;
+    padding: 5px;
+    position: relative;
+}
+
+.seat:nth-child(3) {
+    margin-right: 14.28571428571429%;
+}
+
+.seat input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.seat input[type="checkbox"]:checked +label {
+    background: green;
+    color: white;
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.seat input[type="checkbox"]:disabled +label {
+    background: #dddddd;
+    color: black;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.seat input[type="checkbox"]:disabled +label:after {
+    content: "X";
+    text-indent: 0;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.seat input[type="checkbox"]:disabled +label:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.seat label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding: 4px 0;
+    background: #F42536;
+    color: white;
+    border-radius: 5px;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.seat label:before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 1px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: rgba(255, 255, 255, .4);
+    border-radius: 3px;
+}
+
+.seat label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0px 2px #5C6AFF;
+}
+
+/* Animation */
+
+@-webkit-keyframes rubberBand {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes rubberBand {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+
+/* Nave con caja */
+
+.plane.box .seat label {
+    padding: 15px 0;
+    background: aqua;
+    color: black;
+}
+
+.plane.box .seat label:before {
+    height: 85%;
+}
+
+.plane.box .seat input[type="checkbox"]:checked +label {
+    color: white;
+    background: blue;
+}
+
+.plane.box .seat input[type="checkbox"]:disabled +label:after {
+    top: 15px;
+}
+
+/* Teletransportacion */
+
+.card.capsula {
+    box-sizing: border-box;
+    height: 254px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    /* box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22); */
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 22%);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.card.capsula img {
+    filter: grayscale(1);
+}
+  
+.card.capsula:hover {
+    border: 1px solid gray;
+    transform: scale(1.05);
+}
+
+.card.capsula:active,
+.card.capsula.active {
+    border: 1px solid gray;
+    /* transform: scale(0.95) rotateZ(1.7deg); */
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.card.capsula:active img,
+.card.capsula.active img {
+    filter: sepia(1);
+}
+
+/* Forma pago */
+
+/* Animación */
+
+svg#approved { margin: 20px 20px 10px; width: 300px; }
+#approved {
+    clip-path: circle(at center);
+    border: 4px solid #f8f3dc;
+    border-radius: 50%;
+    animation: rocketShake .1s linear alternate infinite;
+}
+#approved .st0{fill:#13192d;}
+#approved .st1,.st3{fill:#f8f3dc}
+#approved .st3{stroke:#13192d;stroke-width:4;stroke-miterlimit:10}
+#approved .st4{fill:#69b3b2}
+
+#approved .rocket {
+    animation: rocketMove 5s linear alternate infinite;
+}
+#approved .st1 {
+    transform: translateY(-100%);
+    animation: starsMove 6s infinite;
+}
+#approved .st1:nth-of-type(5) {
+    animation-delay: 3.5s;
+    animation-duration: 8s;
+}
+#approved .st1:nth-of-type(4) {
+    animation-delay: 2s;
+    animation-duration: 3s;
+}
+#approved .st1:nth-of-type(3) {
+    animation-delay: .2s;
+    animation-duration: 6s;
+}
+#approved .st1:nth-of-type(2) {
+    animation-delay: 4s;
+}
+#approved .st4 {
+    transform: scale(0); 
+    opacity: 0;
+    animation: smoke 2s 1s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#approved .st4:nth-child(9) {
+    animation-delay: .8s;
+    animation-duration: 1.5s;
+}
+@keyframes starsMove {
+    to { transform: translateY(100%); }
+}
+@keyframes smoke {
+    30% { transform: scale(2); opacity: 1; }
+    31%{ opacity: 0.5; }
+}
+@keyframes rocketShake {
+    from { transform: rotate(-.5deg); }
+    to { transform: rotate(.5deg); }
+}
+@keyframes rocketMove {
+    50% { transform: translateY(-15%); }
+    70% { transform: translateY(0); }
+    80% { transform: translateY(2%); }
+}
+
+#detalle-formas-pago {
+    height: auto;
+}
+
+/*------------------------------------------*/

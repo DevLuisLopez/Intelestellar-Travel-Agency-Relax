@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Canvas API">
+        <meta name="author" content="RCM">
+        <title>Proyecto: Viajes</title>
+
+        <!-- Favicons -->
+        <!-- <link href="img/favicon.png" rel="icon"> -->
+        <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <!-- Boostrap CSS Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+        <!-- Libraries CSS -->
+        <!-- <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+        <!-- <link href="../lib/animate/animate.min.css" rel="stylesheet"> -->
+        
+        <!-- Custom Styles -->
+        <link href="lib/style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="content-wrap">
+
+                <!-- Selección de destino -->
+                <div class="seccion-formulario" id="seleccion-destino"></div>
+
+                <!-- Tipo de viaje -->
+                <div class="seccion-formulario" id="tipo-viaje"></div>
+
+                <!-- Selección de asientos -->
+                <div class="seccion-formulario" id="seleccion-asientos"></div>
+
+                <!-- Formas de pago -->
+                <div class="seccion-formulario" id="formas-pago"></div>
+
+                <!-- Detalles de viaje -->
+                <div class="seccion-formulario" id="detalles-viaje"></div>
+
+            </div>
+
+            <!-- Footer -->
+            <!-- <footer id="footer"></footer> -->
+
+        </div>
+
+        <!-- JS --> 
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        <script src="lib/main.js"></script>
+
+        <!-- Carga de contenidos -->
+        <script type="text/javascript">
+
+            // Carga sección "Selección de destino"
+            $('#seleccion-destino').load('seleccion-destino.html');
+
+            // Carga sección "Tipo de viaje"
+            $('#tipo-viaje').load("tipo-viaje.html");
+
+            // Carga sección "Selección de asientos"
+            $('#seleccion-asientos').load("seleccion-asientos.html");
+
+            // Carga sección "Formas de pago"
+            $('#formas-pago').load("formas-pago.html");
+
+            // Carga sección "Detalles de viaje"
+            $('#detalles-viaje').load("detalles-viaje.html");
+
+            // Carga sección "Footer"
+            // $('#footer').load("secciones/footer.html");
+
+        </script>
+    </body>
+</html>

@@ -295,3 +295,26 @@
 
 
 })(jQuery);
+
+/* Funciones - Formulario */
+
+// Función - Buscar tipo de viaje
+function buscaTipoViaje(){
+  console.log('llega');
+  window.location.href = 'secciones/formulario.html';
+}
+
+// Función - Cambiar de sección
+function cambiarSeccion(actualPage, otherPage){
+  if(actualPage != '' && otherPage != ''){
+      $('#' + actualPage).hide();
+      $('#' + otherPage).show();
+  }else{
+      window.location.href = './filtros-viajes.html';
+  }
+}
+
+// Función - Selecciona el tipo de nave
+function seleccionTipoViaje(){
+
+}
