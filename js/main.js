@@ -298,17 +298,8 @@
 
 /* Funciones - Formulario */
 
-// Función - Seleccionar compañia
-function seleccionaCompania(id){
-  $('#' + id).removeClass('btn-primary');
-  $('#' + id).addClass('btn-success');
-  $('#' + id).html('Seleccionar<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
-  $('#btn-continuar-seleccion-destino').removeAttr('disabled');
-}
-
 // Función - Buscar tipo de viaje
 function buscaTipoViaje(){
-  console.log('llega');
   window.location.href = 'secciones/formulario.html';
 }
 
@@ -322,9 +313,40 @@ function cambiarSeccion(actualPage, otherPage){
   }
 }
 
-// Función - Selecciona el tipo de nave
-function seleccionTipoViaje(){
+// Función - Seleccionar compañia
+function seleccionaCompania(id){
+  $('.carousel-caption .btn').removeClass('btn-success');
+  $('.carousel-caption .btn').addClass('btn-primary');
+  $('.carousel-caption .btn').html('Seleccionar');
+  $('#' + id).removeClass('btn-primary');
+  $('#' + id).addClass('btn-success');
+  $('#' + id).html('Seleccionar<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
+  $('#btn-continuar-seleccion-destino').removeAttr('disabled');
+}
 
+// Función - Selecciona el tipo de nave
+function seleccionTipoViaje(id){
+  $('.card-body .contenedor-boton .btn').removeClass('btn-success');
+  $('.card-body .contenedor-boton .btn').addClass('btn-primary');
+  $('.card-body .contenedor-boton .btn').html('Seleccionar');
+  $('#viaje-' + id).removeClass('btn-primary');
+  $('#viaje-' + id).addClass('btn-success');
+  $('#viaje-' + id).html('Seleccionar<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
+  $('#btn-continuar-seleccion-asientos').removeAttr('disabled');
+}
+
+var arrAsientos = [];
+
+// Función - Selección asiento
+function seleccionAsiento(idTipo, idAsiento){
+  if(arrAsientos.length == 0){
+    arrAsientos.push(idTipo);
+    $('#asientos-nave-caja').html(idAsiento);
+  }else if(arrAsientos.length == 1){
+    arrAsientos.push(idTipo);
+    var asiento = $('#asientos-nave-caja').html();
+    $('#asientos-nave-caja').html(asiento + ', ' + idAsiento);
+  }
 }
 
 // Función - Realizar pago
