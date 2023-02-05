@@ -400,7 +400,7 @@ textarea.form-control {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: calc(80vh - 117px);
+    height: 70hv/*calc(80vh - 117px);*/;
     min-height: 500px;
     position: relative; }
     .owl-carousel.home-slider .slider-item .slider-text {
@@ -456,10 +456,12 @@ textarea.form-control {
   padding-bottom: 30px; }
 
 .owl-carousel.major-caousel .slider-item {
-  height: inherit;
+  height: 70vh;
   min-height: inherit; }
   .owl-carousel.major-caousel .slider-item img {
-    margin-bottom: 0; }
+  width: 700px;
+    margin-bottom: 0; 
+  }
 
 .owl-carousel.major-caousel .owl-nav {
   opacity: 1;
