@@ -310,11 +310,26 @@ function cambiarSeccion(actualPage, otherPage){
       $('#' + actualPage).hide();
       $('#' + otherPage).show();
   }else{
-      window.location.href = './filtros-viajes.html';
+      window.location.href = '../index.html';
   }
 }
 
 // Función - Selecciona el tipo de nave
 function seleccionTipoViaje(){
+
+}
+
+// Función - Realizar pago
+function realizarPago(){
+
+  document.getElementById('btn-continuar-pago').disabled = true;
+
+  setTimeout(() => {
+
+    $('.gif-carga').hide();
+    $('.aviso-confirmacion').show();
+    document.getElementById('btn-continuar-pago').disabled = false;
+    
+  }, "3000");
 
 }
