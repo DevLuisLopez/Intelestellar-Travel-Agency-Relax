@@ -26,10 +26,10 @@
     border-color: #0383C5;
 }
 
-.btn.btn.btn-primary:hover {
+/* .btn.btn.btn-primary:hover {
     background-color: #d90000;
     border-color: #cc0000;
-}
+} */
 
 #btn-continuar {
     width: auto;
