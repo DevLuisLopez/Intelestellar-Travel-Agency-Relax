@@ -31,7 +31,7 @@ a {
 
 h1, h2, h3, h4, h5 {
   color: #000;
-  font-family: "Playfair Display", times, serif; }
+  font-family: "Azonix", times, serif; }
 
 .font-family-serif {
   font-family: "Playfair Display", times, serif; }
@@ -106,7 +106,7 @@ textarea.form-control {
   width: 100%;
   position: relative; }
   .site-hero .heading {
-    font-family: "Playfair Display", times, serif;
+    font-family: "Azonix", times, serif;
     font-weight: bold; }
   .site-hero .scroll-down {
     position: absolute;
@@ -138,7 +138,7 @@ textarea.form-control {
   min-height: 700px; }
   .site-hero-inner .heading {
     font-size: 80px;
-    font-family: "Playfair Display", times, serif;
+    font-family: "Azonix", times, serif;
     color: #fff;
     line-height: 1;
     font-weight: bold; }
@@ -283,7 +283,7 @@ textarea.form-control {
 
 .heading-serif, .heading, .testimonial-section .heading, .slider-section .heading, .blog-post-entry .heading {
   font-size: 60px;
-  font-family: "Playfair Display", times, serif;
+  font-family: "Azonix", times, serif;
   font-weight: 700; }
   @media (max-width: 991.98px) {
     .heading-serif, .heading, .testimonial-section .heading, .slider-section .heading, .blog-post-entry .heading {
@@ -622,7 +622,7 @@ textarea.form-control {
   .side-box .heading, .sidebar-search .heading {
     font-size: 18px;
     margin-bottom: 30px;
-    font-family: "Roboto", arial, sans-serif; }
+    font-family: "Azonix", arial, sans-serif !important;}
 
 .post-list li {
   margin-bottom: 20px; }
@@ -658,7 +658,7 @@ textarea.form-control {
     border-color: #343a40; }
 
 .contact-section .contact-info p {
-  font-family: "Playfair Display", times, serif;
+  font-family: "Roboto", times, serif;
   font-size: 30px;
   margin-bottom: 30px; }
   .contact-section .contact-info p .d-block {
@@ -1221,7 +1221,7 @@ textarea.form-control {
   .pb_navbar .navbar-toggler:active, .pb_navbar .navbar-toggler:focus {
     outline: none; }
   .pb_navbar .navbar-brand {
-    font-family: "Playfair Display", times, serif;
+    font-family: "Roboto", times, serif;
     font-size: 30px; }
   .pb_navbar > .container {
     position: relative; }
@@ -1377,6 +1377,9 @@ textarea.form-control {
 .colortext {
   color: #ededed !important;
 }        
+.texto-tittle{
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
 
 .pb_offcanvas-header_v1 {
   padding-top: 40px;
