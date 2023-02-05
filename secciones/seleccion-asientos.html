@@ -2,33 +2,33 @@
     <div class="mt-3" id="breadcrumb">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">Selección</li>
-                <li class="breadcrumb-item">Tipo de viaje</li>
-                <li class="breadcrumb-item active" aria-current="page">Selecciona tus asientos</li>
+                <li class="breadcrumb-item">Selecting a flight company</li>
+                <li class="breadcrumb-item">Choosing the type of trip</li>
+                <li class="breadcrumb-item active" aria-current="page">Choosing seats</li>
             </ol>
         </nav>
         <hr>
     </div>
     <div class="mb-4" id="seleccion-asientos">
         <div class="row">
-            <div class="col-12" id="seleccion-nave-normal">
+            <div class="col-12 seleccion-tipo-asiento" id="seleccion-nave-normal">
                 <div class="mt-1 mb-3">
-                    <h5 class="m-0">Selecciona tus asientos</h5>
+                    <h5 class="m-0">Choose your seats</h5>
                 </div>
                 <div class="row">
                     <div class="col-3">
                         <div class="panel p-3" id="detalles-vuelo">
-                            <h5 class="mb-2"><i class="bi bi-rocket fs-5 me-2"></i><strong>Tipo de nave</strong></h5>
+                            <h5 class="mb-2"><i class="bi bi-rocket fs-5 me-2"></i><strong>Type of ship</strong></h5>
                             <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Normal</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-clock-history fs-5 me-2"></i><strong>Duración de viaje</strong></h5>
-                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>20 años</p>
+                            <h5 class="mb-2"><i class="bi bi-clock-history fs-5 me-2"></i><strong>Trip duration</strong></h5>
+                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>7 days</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-bookmark-star fs-5 me-2"></i><strong>Asientos disponibles</strong></h5>
-                            <p class="mb-2" id="cantidad-asientos-nave"><i class="bi bi-chevron-double-right me-2"></i>2</p>
+                            <h5 class="mb-2"><i class="bi bi-bookmark-star fs-5 me-2"></i><strong>Avaliable seats</strong></h5>
+                            <p class="mb-2" id="cantidad-asientos-nave"><i class="bi bi-chevron-double-right me-2"></i>1</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-bookmark-star-fill fs-5 me-2"></i><strong>Asientos seleccionados</strong></h5>
-                            <p class="mb-2" id="asientos-nave"><i class="bi bi-chevron-double-right me-2"></i>1A, 1B</p>
+                            <h5 class="mb-2"><i class="bi bi-bookmark-star-fill fs-5 me-2"></i><strong>Selected seats</strong></h5>
+                            <p class="mb-2" id="asientos-nave"><i class="bi bi-chevron-double-right me-2"></i>-</p>
                         </div>
                     </div>
                     <div class="col-9" id="mapa-asientos">
@@ -42,15 +42,15 @@
                                         <li class="row">
                                             <ol class="seats">
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a1A" />
+                                                    <input type="checkbox" id="a1A" onclick="seleccionAsiento('nave', '1A');" />
                                                     <label for="a1A">1A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a1B" />
+                                                    <input type="checkbox" id="a1B" onclick="seleccionAsiento('nave', '1B');" />
                                                     <label for="a1B">1B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a1C" />
+                                                    <input type="checkbox" id="a1C" onclick="seleccionAsiento('nave', '1C');" />
                                                     <label for="a1C">1C</label>
                                                 </li>
                                                 <li class="seat">
@@ -58,11 +58,11 @@
                                                     <label for="a1D">Occupied</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a1E" />
+                                                    <input type="checkbox" id="a1E" onclick="seleccionAsiento('nave', '1E');" />
                                                     <label for="a1E">1E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a1F" />
+                                                    <input type="checkbox" id="a1F" onclick="seleccionAsiento('nave', '1F');" />
                                                     <label for="a1F">1F</label>
                                                 </li>
                                             </ol>
@@ -70,27 +70,27 @@
                                         <li class="row">
                                             <ol class="seats">
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a2A" />
+                                                    <input type="checkbox" id="a2A" onclick="seleccionAsiento('nave', '2A');" />
                                                     <label for="a2A">2A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a2B" />
+                                                    <input type="checkbox" id="a2B" onclick="seleccionAsiento('nave', '2B');" />
                                                     <label for="a2B">2B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a2C" />
+                                                    <input type="checkbox" id="a2C" onclick="seleccionAsiento('nave', '2C');" />
                                                     <label for="a2C">2C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a2D" />
+                                                    <input type="checkbox" id="a2D" onclick="seleccionAsiento('nave', '2D');" />
                                                     <label for="a2D">2D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a2E" />
+                                                    <input type="checkbox" id="a2E" onclick="seleccionAsiento('nave', '2E');" />
                                                     <label for="a2E">2E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="a2F" />
+                                                    <input type="checkbox" id="a2F" onclick="seleccionAsiento('nave', '2F');" />
                                                     <label for="a2F">2F</label>
                                                 </li>
                                             </ol>
@@ -108,58 +108,58 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12" id="seleccion-nave-capsulas">
+            <div class="col-12 seleccion-tipo-asiento" id="seleccion-nave-capsulas">
                 <div class="mt-1 mb-3">
-                    <h5 class="m-0">Selecciona tus asientos</h5>
+                    <h5 class="m-0">Choose your seats</h5>
                 </div>
                 <div class="row">
                     <div class="col-3">
                         <div class="panel p-3" id="detalles-vuelo">
-                            <h5 class="mb-2"><i class="bi bi-rocket fs-5 me-2"></i><strong>Tipo de nave</strong></h5>
+                            <h5 class="mb-2"><i class="bi bi-rocket fs-5 me-2"></i><strong>Type of ship</strong></h5>
                             <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Normal</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-clock-history fs-5 me-2"></i><strong>Duración de viaje</strong></h5>
-                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>20 años</p>
+                            <h5 class="mb-2"><i class="bi bi-clock-history fs-5 me-2"></i><strong>Trip duration</strong></h5>
+                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>7 days</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-bookmark-star fs-5 me-2"></i><strong>Asientos disponibles</strong></h5>
-                            <p class="mb-2" id="cantidad-asientos-nave-caja"><i class="bi bi-chevron-double-right me-2"></i>2</p>
+                            <h5 class="mb-2"><i class="bi bi-bookmark-star fs-5 me-2"></i><strong>Avaliable seats</strong></h5>
+                            <p class="mb-2" id="cantidad-asientos-nave-capsula"><i class="bi bi-chevron-double-right me-2"></i>1</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-bookmark-star-fill fs-5 me-2"></i><strong>Asientos seleccionados</strong></h5>
-                            <p class="mb-2" id="asientos-nave-caja"><i class="bi bi-chevron-double-right me-2"></i>1A, 1B</p>
+                            <h5 class="mb-2"><i class="bi bi-bookmark-star-fill fs-5 me-2"></i><strong>Selected seats</strong></h5>
+                            <p class="mb-2" id="asientos-nave-capsula"><i class="bi bi-chevron-double-right me-2"></i>-</p>
                         </div>
                     </div>
                     <div class="col-9" id="mapa-asientos">
                         <div class="panel p-5">
                             <div class="contenedor-asientos" id="contenedor-asiento-nave-caja">
 
-                                <!-- Asientos Nave Cajas -->
+                                <!-- Asientos Nave capsulas -->
                                 <div class="plane box">
                                     <div class="cockpit"></div>
                                     <ol class="cabin fuselage">
                                         <li class="row">
                                             <ol class="seats">
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b1A" />
+                                                    <input type="checkbox" id="b1A" onclick="seleccionAsiento('nave-caja', '1A');" />
                                                     <label for="b1A">1A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b1B" />
+                                                    <input type="checkbox" id="b1B" onclick="seleccionAsiento('nave-caja', '1B');" />
                                                     <label for="b1B">1B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b1C" />
+                                                    <input type="checkbox" id="b1C" onclick="seleccionAsiento('nave-caja', '1C');" />
                                                     <label for="b1C">1C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b1D" />
+                                                    <input type="checkbox" id="b1D" onclick="seleccionAsiento('nave-caja', '1D');" />
                                                     <label for="b1D">1D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b1E" />
+                                                    <input type="checkbox" id="b1E" onclick="seleccionAsiento('nave-caja', '1E');" />
                                                     <label for="b1E">1E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b1F" />
+                                                    <input type="checkbox" id="b1F" onclick="seleccionAsiento('nave-caja', '1F');" />
                                                     <label for="b1F">1F</label>
                                                 </li>
                                             </ol>
@@ -167,11 +167,11 @@
                                         <li class="row">
                                             <ol class="seats">
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b2A" />
+                                                    <input type="checkbox" id="b2A" onclick="seleccionAsiento('nave-caja', '2A');" />
                                                     <label for="b2A">2A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b2B" />
+                                                    <input type="checkbox" id="b2B" onclick="seleccionAsiento('nave-caja', '2B');" />
                                                     <label for="b2B">2B</label>
                                                 </li>
                                                 <li class="seat">
@@ -179,15 +179,15 @@
                                                     <label for="b2C">Occupied</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b2D" />
+                                                    <input type="checkbox" id="b2D" onclick="seleccionAsiento('nave-caja', '2D');" />
                                                     <label for="b2D">2D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b2E" />
+                                                    <input type="checkbox" id="b2E" onclick="seleccionAsiento('nave-caja', '2E');" />
                                                     <label for="b2E">2E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input type="checkbox" id="b2F" />
+                                                    <input type="checkbox" id="b2F" onclick="seleccionAsiento('nave-caja', '2F');" />
                                                     <label for="b2F">2F</label>
                                                 </li>
                                             </ol>
@@ -205,24 +205,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12" id="seleccion-teletransportacion">
+            <div class="col-12 seleccion-tipo-asiento" id="seleccion-teletransportacion">
                 <div class="mt-1 mb-3">
                     <h5 class="m-0">Selecciona tus asientos</h5>
                 </div>
                 <div class="row">
                     <div class="col-3">
                         <div class="panel p-3" id="detalles-vuelo">
-                            <h5 class="mb-2"><i class="bi bi-rocket fs-5 me-2"></i><strong>Tipo de viaje</strong></h5>
-                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Teletransportación</p>
+                            <h5 class="mb-2"><i class="bi bi-rocket fs-5 me-2"></i><strong>Type of travel</strong></h5>
+                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Teletransportation</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-clock-history fs-5 me-2"></i><strong>Duración de viaje</strong></h5>
-                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>5 segundos</p>
+                            <h5 class="mb-2"><i class="bi bi-clock-history fs-5 me-2"></i><strong>Travel duration</strong></h5>
+                            <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>5 seconds</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-bookmark-star fs-5 me-2"></i><strong>Asientos disponibles</strong></h5>
-                            <p class="mb-2" id="cantidad-asientos-teletransportacion"><i class="bi bi-chevron-double-right me-2"></i>2</p>
+                            <h5 class="mb-2"><i class="bi bi-bookmark-star fs-5 me-2"></i><strong>Available seats</strong></h5>
+                            <p class="mb-2" id="cantidad-asientos-teletransportacion"><i class="bi bi-chevron-double-right me-2"></i>1</p>
                             <hr>
-                            <h5 class="mb-2"><i class="bi bi-bookmark-star-fill fs-5 me-2"></i><strong>Asientos seleccionados</strong></h5>
-                            <p class="mb-2" id="asientos-teletransportacion"><i class="bi bi-chevron-double-right me-2"></i>Capsula A, Capsula B</p>
+                            <h5 class="mb-2"><i class="bi bi-bookmark-star-fill fs-5 me-2"></i><strong>Selected seats</strong></h5>
+                            <p class="mb-2" id="asientos-teletransportacion"><i class="bi bi-chevron-double-right me-2"></i>-</p>
                         </div>
                     </div>
                     <div class="col-9" id="mapa-asientos">
@@ -230,61 +230,36 @@
                             <div class="contenedor-asientos" id="contenedor-teletransportacion">
 
                                 <!-- Asiento Teletransportación -->
-                                <!-- <div class="plane teleportation">
-                                    <ol class="cabin fuselage">
-                                        <li class="row">
-                                            <ol class="seats">
-                                                <li class="seat">
-                                                    <input type="checkbox" id="c1A">
-                                                    <label for="c1A">Box A</label>
-                                                </li>
-                                                <li class="seat">
-                                                    <input type="checkbox" id="c1B">
-                                                    <label for="c1B">Box B</label>
-                                                </li>
-                                                <li class="seat">
-                                                    <input type="checkbox" id="c1C">
-                                                    <label for="c1C">Box C</label>
-                                                </li>
-                                                <li class="seat">
-                                                    <input type="checkbox" id="c1D">
-                                                    <label for="c1D">Box D</label>
-                                                </li>
-                                            </ol>
-                                        </li>
-                                    </ol>
-                                </div> -->
-
                                 <div class="row">
                                     <div class="col-3">
-                                        <div class="card capsula" id="capsula1">
+                                        <div class="card capsula" id="capsula1" onclick="seleccionAsiento('teletransportacion', 'Capsule A');">
                                             <img src="../images/formulario/capsula.png" class="card-img p-3" alt="">
                                             <div class="card-img-overlay">
-                                                <h5 class="card-title">Cápsula A</h5>
+                                                <h5 class="card-title">Capsule A</h5>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <div class="card capsula" id="capsula2">
+                                        <div class="card capsula" id="capsula2" onclick="seleccionAsiento('teletransportacion', 'Capsule B');">
                                             <img src="../images/formulario/capsula.png" class="card-img p-3" alt="">
                                             <div class="card-img-overlay">
-                                                <h5 class="card-title">Cápsula B</h5>
+                                                <h5 class="card-title">Capsule B</h5>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <div class="card capsula" id="capsula3">
+                                        <div class="card capsula" id="capsula3" onclick="seleccionAsiento('teletransportacion', 'Capsule C');">
                                             <img src="../images/formulario/capsula.png" class="card-img p-3" alt="">
                                             <div class="card-img-overlay">
-                                                <h5 class="card-title">Cápsula C</h5>
+                                                <h5 class="card-title">Capsule C</h5>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <div class="card capsula" id="capsula4">
+                                        <div class="card capsula" id="capsula4" onclick="seleccionAsiento('teletransportacion', 'Capsule D');">
                                             <img src="../images/formulario/capsula.png" class="card-img p-3" alt="">
                                             <div class="card-img-overlay">
-                                                <h5 class="card-title">Cápsula D</h5>
+                                                <h5 class="card-title">Capsule D</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -299,8 +274,8 @@
     </div>
     <div class="mb-4">
         <div class="text-end">
-            <button type="button" class="btn btn-secondary me-1" id="btn-retroceder" onclick="cambiarSeccion('seleccion-asientos', 'tipo-viaje');">Retroceder</button>
-            <button type="button" class="btn btn-primary ms-1" id="btn-continuar" onclick="cambiarSeccion('seleccion-asientos', 'formas-pago');">Continuar</button>
+            <button type="button" class="btn btn-secondary me-1" id="btn-retroceder" onclick="cambiarSeccion('seleccion-asientos', 'tipo-viaje');">Back</button>
+            <button type="button" class="btn btn-primary ms-1" id="btn-continuar-pago" disabled onclick="cambiarSeccion('seleccion-asientos', 'formas-pago');">Continue</button>
         </div>
     </div>
 </div>

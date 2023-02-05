@@ -79,19 +79,26 @@
     bottom: 55px;
 }
 
+#contenedor-tipos-viaje img {
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Seleccion asientos */
 
-.contenedor-asientos {
-    /* display: none; */
+.seleccion-tipo-asiento {
+    display: none;
+}
+
+.seleccion-tipo-asiento#seleccion-nave-normal {
     display: block;
+}
+
+.seleccion-tipo-asiento .contenedor-asientos {
     overflow: hidden;
 }
 
-.contenedor-asientos#contenedor-asiento-nave {
-    display: block;
-}
-
-.contenedor-asientos#contenedor-teletransportacion{
+.seleccion-tipo-asiento .contenedor-asientos#contenedor-teletransportacion{
     overflow: inherit;
 }
 

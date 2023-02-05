@@ -317,48 +317,82 @@ function cambiarSeccion(actualPage, otherPage){
 function seleccionaCompania(id){
   $('.carousel-caption .btn').removeClass('btn-success');
   $('.carousel-caption .btn').addClass('btn-primary');
-  $('.carousel-caption .btn').html('Seleccionar');
+  $('.carousel-caption .btn').html('Select');
   $('#' + id).removeClass('btn-primary');
   $('#' + id).addClass('btn-success');
-  $('#' + id).html('Seleccionar<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
+  $('#' + id).html('Select<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
   $('#btn-continuar-seleccion-destino').removeAttr('disabled');
+}
+
+// Función - Muestra detalles del viaje
+function muestraDetallesTipoViaje(){
+ 
+  
+  
 }
 
 // Función - Selecciona el tipo de nave
 function seleccionTipoViaje(id){
   $('.card-body .contenedor-boton .btn').removeClass('btn-success');
   $('.card-body .contenedor-boton .btn').addClass('btn-primary');
-  $('.card-body .contenedor-boton .btn').html('Seleccionar');
-  $('#viaje-' + id).removeClass('btn-primary');
-  $('#viaje-' + id).addClass('btn-success');
-  $('#viaje-' + id).html('Seleccionar<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
-  $('#btn-continuar-seleccion-asientos').removeAttr('disabled');
+  $('.card-body .contenedor-boton .btn').html('Select');
+  $('#seleccion-viaje-' + id).removeClass('btn-primary');
+  $('#seleccion-viaje-' + id).addClass('btn-success');
+  $('#seleccion-viaje-' + id).html('Select<i class="bi bi-check-circle-fill ms-2 icn-white"></i>');
+  $('#btn-continuar-asientos').removeAttr('disabled');
 }
-
-var arrAsientos = [];
 
 // Función - Selección asiento
 function seleccionAsiento(idTipo, idAsiento){
+  console.log(idTipo);
+  console.log(idAsiento);
+  var arrAsientos = [];
+
+  console.log(arrAsientos);
   if(arrAsientos.length == 0){
-    arrAsientos.push(idTipo);
-    $('#asientos-nave-caja').html(idAsiento);
+
+    arrAsientos.push(idAsiento);
+
+    if(idTipo == 'nave'){
+      $('#asientos-nave').html('<i class="bi bi-chevron-double-right me-2"></i>' + idAsiento);
+    }else if(idTipo == 'nave-caja'){
+      $('#asientos-nave-caja').html('<i class="bi bi-chevron-double-right me-2"></i>' + idAsiento);
+    }else if(idTipo == 'teletransportacion'){
+      $('#asientos-teletransportacion').html('<i class="bi bi-chevron-double-right me-2"></i>' + idAsiento);
+    }
+
   }else if(arrAsientos.length == 1){
+
     arrAsientos.push(idTipo);
-    var asiento = $('#asientos-nave-caja').html();
-    $('#asientos-nave-caja').html(asiento + ', ' + idAsiento);
+    console.log(arrAsientos)
+
+    if(idTipo == 'nave'){
+      var asiento = $('#asientos-nave-caja').html();
+    $('#asientos-nave').html('<i class="bi bi-chevron-double-right me-2"></i>' + asiento + ', ' + idAsiento);
+    }else if(idTipo == 'nave-caja'){
+      var asiento = $('#asientos-nave-caja').html();
+    $('#asientos-nave-caja').html('<i class="bi bi-chevron-double-right me-2"></i>' + asiento + ', ' + idAsiento);
+    }else if(idTipo == 'teletransportacion'){
+      var asiento = $('#asientos-nave-caja').html();
+    $('#asientos-teletransportacion').html('<i class="bi bi-chevron-double-right me-2"></i>' + asiento + ', ' + idAsiento);
+    }
+
   }
+
+  document.getElementById('btn-continuar-pago').disabled = false;
+
 }
 
 // Función - Realizar pago
 function realizarPago(){
 
-  document.getElementById('btn-continuar-pago').disabled = true;
+  document.getElementById('btn-continuar-detalles').disabled = true;
 
   setTimeout(() => {
 
     $('.gif-carga').hide();
     $('.aviso-confirmacion').show();
-    document.getElementById('btn-continuar-pago').disabled = false;
+    document.getElementById('btn-continuar-detalles').disabled = false;
     
   }, "3000");
 
