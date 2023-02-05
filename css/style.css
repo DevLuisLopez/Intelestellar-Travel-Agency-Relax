@@ -21,6 +21,7 @@ body {
   background: #0383C5; }
 
 a {
+  color: #0383C5 ;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
@@ -73,6 +74,15 @@ h1, h2, h3, h4, h5 {
   box-shadow: none !important; }
   .btn:focus, .btn:active, .form-control:focus, .form-control:active {
     outline: none; }
+
+.text-primary {
+  color: #0383C5 !important;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #0383C5;
+  border-color: #0383C5;
+}
 
 .form-control {
   -webkit-box-shadow: none !important;
@@ -547,7 +557,9 @@ textarea.form-control {
     
 .footer-section {
   background: #1a1a1a;
-  color: #fff; }
+  color: #fff; 
+  padding: 1em;
+}
   .footer-section a {
     color: rgba(255, 255, 255, 0.7); }
     .footer-section a:hover {
