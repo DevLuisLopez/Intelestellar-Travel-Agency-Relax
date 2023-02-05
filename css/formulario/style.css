@@ -38,6 +38,14 @@
     width: auto;
 }
 
+input.valid {
+    border-color: green;
+}
+
+input.invalid {
+    border-color: red;
+}
+
 /* Breadcrumb */
 
 .breadcrumb-item.active {
