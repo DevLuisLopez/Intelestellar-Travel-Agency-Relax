@@ -298,6 +298,11 @@
 
 /* Funciones - Formulario */
 
+// Función - Seleccionar compañia
+function seleccionaCompania(idCompania){
+
+}
+
 // Función - Buscar tipo de viaje
 function buscaTipoViaje(){
   console.log('llega');
