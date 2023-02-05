@@ -25,25 +25,25 @@
                             <div class="row">
                                 <div class="col-12 campo mb-2">
                                     <label id="campoNombre1" class="mb-1">Full name</label>
-                                    <input type="text" id="campoNombre1" class="form-control" placeholder="Enter full name">
+                                    <input type="text" id="campoNombre1" class="form-control" placeholder="Enter full name" onclick="validaCampoTexto('campoNombre1');" onkeydown="validaCampoTexto('campoNombre1');" onkeyup="validaCampoTexto('campoNombre1');">
                                 </div>
                                 <div class="col-12 campo mb-2">
                                     <label id="campoPlaneta1" class="mb-1">Planet of residence</label>
-                                    <input type="text" id="campoPlaneta1" class="form-control" placeholder="Enter home planet">
+                                    <input type="text" id="campoPlaneta1" class="form-control" placeholder="Enter home planet" onclick="validaCampoTexto('campoPlaneta1');" onkeydown="validaCampoTexto('campoPlaneta1');" onkeyup="validaCampoTexto('campoPlaneta1');">
                                 </div>
                                 <p class="mb-1">Date of birth</strong></p>
                                 <div class="row">
                                     <div class="col-4 campo mb-2">
                                         <label id="campoDia1" class="mb-1">Day</label>
-                                        <input type="number" id="campoDia1" class="form-control" placeholder="Enter the day" min="1" max="31">
+                                        <input type="number" id="campoDia1" class="form-control" placeholder="Enter the day" min="1" max="31" onclick="validaCampoTexto('campoDia1');" onkeydown="validaCampoTexto('campoDia1');" onkeyup="validaCampoTexto('campoDia1');">
                                     </div>
                                     <div class="col-4 campo mb-2">
                                         <label id="campoMes1" class="mb-1">Month</label>
-                                        <input type="number" id="campoMes1" class="form-control" placeholder="Enter the month" min="1" max="12">
+                                        <input type="number" id="campoMes1" class="form-control" placeholder="Enter the month" min="1" max="12" onclick="validaCampoTexto('campoMes1');" onkeydown="validaCampoTexto('campoMes1');" onkeyup="validaCampoTexto('campoMes1');">
                                     </div>
                                     <div class="col-4 campo mb-2">
                                         <label id="campoAnio1" class="mb-1">Year</label>
-                                        <input type="number" id="campoAnio1" class="form-control" placeholder="Enter the Year" min="2050" max="2132">
+                                        <input type="number" id="campoAnio1" class="form-control" placeholder="Enter the Year" min="2050" max="2132" onclick="validaCampoTexto('campoAnio1');" onkeydown="validaCampoTexto('campoAnio1');" onkeyup="validaCampoTexto('campoAnio1');">
                                     </div>
                                 </div>
                                 <p class="mb-1">Gender</p>
@@ -203,11 +203,11 @@
                             <div class="col-6 campo mb-2">
                                 <div class="col-12 campo mb-2">
                                     <label id="cantidadBitcoin" class="mb-1">Enter the amount to pay</label>
-                                    <input type="text" id="numeroTarjeta" class="form-control" placeholder="Enter the amount: BTC">
+                                    <input type="text" id="cantidadPago" class="form-control" placeholder="Enter the amount: BTC" onclick="validaCampoTexto('cantidadPago');" onkeydown="validaCampoTexto('cantidadPago');" onkeyup="validaCampoTexto('cantidadPago');">
                                 </div>
                                 <div class="col-12 campo mb-2">
                                     <label id="cantidadBitcoin" class="mb-1">Address: bitcoin</label>
-                                    <input type="text" id="numeroTarjeta" class="form-control" placeholder="Enter the address">
+                                    <input type="text" id="direccionBitcoin" class="form-control" placeholder="Enter the address" onclick="validaCampoTexto('direccionBitcoin');" onkeydown="validaCampoTexto('direccionBitcoin');" onkeyup="validaCampoTexto('direccionBitcoin');">
                                 </div>
                             </div>
                         </div>
@@ -216,19 +216,19 @@
                         <div class="row p-1 mt-2 mb-2">
                             <div class="col-6 campo mb-2">
                                 <label id="numeroTarjeta" class="mb-1">Card number</label>
-                                <input type="text" id="numeroTarjeta" class="form-control" placeholder="Enter your card number">
+                                <input type="text" id="numeroTarjeta" class="form-control" placeholder="Enter your card number" onclick="validaCampoTexto('numeroTarjeta');" onkeydown="validaCampoTexto('numeroTarjeta');" onkeyup="validaCampoTexto('numeroTarjeta');">>
                             </div>
                             <div class="col-6 campo mb-2">
                                 <label id="nombreTarjeta" class="mb-1">Cardholder</label>
-                                <input type="text" id="nombreTarjeta" class="form-control" placeholder="Enter the name">
+                                <input type="text" id="nombreTarjeta" class="form-control" placeholder="Enter the name" onclick="validaCampoTexto('nombreTarjeta');" onkeydown="validaCampoTexto('nombreTarjeta');" onkeyup="validaCampoTexto('nombreTarjeta');">>
                             </div>
                             <div class="col-3 campo mb-2">
                                 <label id="fechasTarjeta" class="mb-1">Due date</label>
-                                <input type="text" id="fechasTarjeta" class="form-control" placeholder="MM/AA">
+                                <input type="text" id="fechasTarjeta" class="form-control" placeholder="MM/AA" onclick="validaCampoTexto('fechasTarjeta');" onkeydown="validaCampoTexto('fechasTarjeta');" onkeyup="validaCampoTexto('fechasTarjeta');">>
                             </div>
                             <div class="col-3 campo mb-2">
                                 <label id="codigoTarjeta" class="mb-1">Safety Code</label>
-                                <input type="text" id="codigoTarjeta" class="form-control">
+                                <input type="text" id="codigoTarjeta" class="form-control" onclick="validaCampoTexto('codigoTarjeta');" onkeydown="validaCampoTexto('codigoTarjeta');" onkeyup="validaCampoTexto('codigoTarjeta');">>
                             </div>
                         </div>
                     </div>

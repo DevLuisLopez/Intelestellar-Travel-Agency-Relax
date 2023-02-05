@@ -324,13 +324,6 @@ function seleccionaCompania(id){
   $('#btn-continuar-seleccion-destino').removeAttr('disabled');
 }
 
-// Función - Muestra detalles del viaje
-function muestraDetallesTipoViaje(){
- 
-  
-  
-}
-
 // Función - Selecciona el tipo de nave
 function seleccionTipoViaje(id){
   $('.card-body .contenedor-boton .btn').removeClass('btn-success');
@@ -348,9 +341,8 @@ function seleccionAsiento(idTipo, idAsiento){
   console.log(idAsiento);
   var arrAsientos = [];
 
-  console.log(arrAsientos);
-  if(arrAsientos.length == 0){
-
+  if(arrAsientos.length < 1){
+    console.log(arrAsientos);
     arrAsientos.push(idAsiento);
 
     if(idTipo == 'nave'){
@@ -361,7 +353,9 @@ function seleccionAsiento(idTipo, idAsiento){
       $('#asientos-teletransportacion').html('<i class="bi bi-chevron-double-right me-2"></i>' + idAsiento);
     }
 
-  }else if(arrAsientos.length == 1){
+    $('#btn-continuar-pago').removeAttr('disabled');
+
+  }else if(arrAsientos.length > 1){
 
     arrAsientos.push(idTipo);
     console.log(arrAsientos)
@@ -377,11 +371,28 @@ function seleccionAsiento(idTipo, idAsiento){
     $('#asientos-teletransportacion').html('<i class="bi bi-chevron-double-right me-2"></i>' + asiento + ', ' + idAsiento);
     }
 
-  }
-
-  document.getElementById('btn-continuar-pago').disabled = false;
+  }  
 
 }
+
+// Función - Valida campos de texto
+function validaCampoTexto(idCampo){
+  console.log(idCampo);
+  var valorCampo = $('input#'+idCampo).val();
+
+    if(valorCampo == ''){
+
+      $('input#'+idCampo).removeClass('valid'); // Agrega clase "Invalid"
+      $('input#'+idCampo).addClass('invalid'); // Agrega clase "Invalid"
+
+    }else{
+
+      $('input#'+idCampo).removeClass('invalid'); // Agrega clase "Invalid"
+      $('input#'+idCampo).addClass('valid'); // Elimina clase "Valid"
+
+    }
+
+  }
 
 // Función - Realizar pago
 function realizarPago(){
