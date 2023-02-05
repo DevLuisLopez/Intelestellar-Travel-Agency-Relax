@@ -1381,6 +1381,10 @@ textarea.form-control {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+.img-seccion{
+  height: 200px;  
+}
+
 .pb_offcanvas-header_v1 {
   padding-top: 40px;
   z-index: 2;
