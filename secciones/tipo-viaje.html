@@ -2,31 +2,31 @@
     <div class="mt-3" id="breadcrumb">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">Selección</li>
-                <li class="breadcrumb-item active" aria-current="page">Tipo de viaje</li>
+                <li class="breadcrumb-item">Selecting a flight company</li>
+                <li class="breadcrumb-item active" aria-current="page">Type of trip</li>
             </ol>
         </nav>
         <hr>
     </div>
     <div class="mb-4" id="tipo-viaje">
         <div class="mt-1 mb-3">
-            <h5 class="m-0">Selecciona tu tipo de viaje</h5>
+            <h5 class="m-0">Select your preferred method of travel</h5>
         </div>
         <div class="row">
             <div class="col-3">
                 <div class="panel p-3" id="detalles-tipo-viaje">
-                    <h5 class="mb-2"><i class="bi bi-rocket me-2"></i>Compañia de vuelo</h5>
+                    <h5 class="mb-2"><i class="bi bi-rocket me-2"></i>Flight Company</h5>
                     <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Space X</p>
                     <hr>
-                    <h5 class="mb-2"><i class="bi bi-airplane me-2"></i>Origen</h5>
-                    <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Tierra</p>
+                    <h5 class="mb-2"><i class="bi bi-airplane me-2"></i>From</h5>
+                    <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Earth</p>
                     <hr>
-                    <h5 class="mb-2"><i class="bi bi-airplane-fill me-2"></i>Destino</h5>
-                    <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Saturno</p>
+                    <h5 class="mb-2"><i class="bi bi-airplane-fill me-2"></i>To</h5>
+                    <p class="mb-2"><i class="bi bi-chevron-double-right me-2"></i>Saturn</p>
                     <hr>
-                    <h5 class="mb-2"><i class="bi bi-calendar3 me-2"></i>Fechas</h5>
-                    <p class="mb-2"><strong>Ida:</strong> 25/Feb/2150</p>
-                    <p class="mb-2"><strong>Vuelta:</strong> 4/Mar/2150</p>
+                    <h5 class="mb-2"><i class="bi bi-calendar3 me-2"></i>Date</h5>
+                    <p class="mb-2"><strong>From:</strong> 25/02/2150</p>
+                    <p class="mb-2"><strong>To:</strong> 4/03/2150</p>
                 </div>
             </div>
             <div class="col-9">
@@ -35,17 +35,17 @@
                         <div class="card mb-3" id="viaje-normal">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="https://via.placeholder.com/350x400?text=Nave+normal" class="img-fluid rounded-start" alt="">
+                                    <img src="../images/formulario/nave.jpeg" class="img-fluid rounded-start" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body h-100">
                                         <div class="detalle-viaje h-100">
-                                            <h5 class="card-title mb-3">Nave (Vuelo normal)</h5>
-                                            <p class="card-text mb-3">Realiza tu viaje dentro de una nave moderna.</p>
-                                            <p class="card-text mb-3"><small class="text-muted">Precio: $3,000,000</small></p>
+                                            <h5 class="card-title mb-3">Ship (normal flight)</h5>
+                                            <p class="card-text mb-3">Make your trip inside a modern ship.</p>
+                                            <p class="card-text mb-3"><small class="text-muted">Price: $3,000,000</small></p>
                                         </div>
                                         <div class="contenedor-boton text-end">
-                                            <button class="btn btn-primary" id="seleccion-tipo-viaje" onclick="seleccionTipoViaje();">Seleccionar</button>
+                                            <button class="btn btn-primary" id="seleccion-viaje-nave" onclick="seleccionTipoViaje('nave');">Select</button>
                                         </div>
                                     </div>
                                 </div>
@@ -56,17 +56,17 @@
                         <div class="card mb-3" id="viaje-capsula">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="https://via.placeholder.com/350x400?text=Nave+caja+criogenica" class="img-fluid rounded-start" alt="">
+                                    <img src="../images/formulario/capsula.jpeg" class="img-fluid rounded-start" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body h-100">
                                         <div class="detalle-viaje h-100">
-                                            <h5 class="card-title mb-3">Nave (Cápsula criogénica)</h5>
-                                            <p class="card-text mb-3">Realiza tu viaje ingresando a una cápsula criogénica.</p>
-                                            <p class="card-text mb-3"><small class="text-muted">Precio: $10,000,000</small></p>
+                                            <h5 class="card-title mb-3">Ship (Cryogenic Capsule)</h5>
+                                            <p class="card-text mb-3">Make your journey by entering a cryogenic capsule..</p>
+                                            <p class="card-text mb-3"><small class="text-muted">Price: $10,000,000</small></p>
                                         </div>
                                         <div class="contenedor-boton text-end">
-                                            <button class="btn btn-primary" id="seleccion-tipo-viaje" onclick="seleccionTipoViaje();">Seleccionar</button>
+                                            <button class="btn btn-primary" id="seleccion-viaje-capsula" onclick="seleccionTipoViaje('capsula');">Select</button>
                                         </div>
                                     </div>
                                 </div>
@@ -77,17 +77,17 @@
                         <div class="card mb-3" id="viaje-teletransportacion">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="https://via.placeholder.com/350x400?text=Teletransportacion" class="img-fluid rounded-start" alt="">
+                                    <img src="../images/formulario/teletransportacion.jpg" class="img-fluid rounded-start" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body h-100">
                                         <div class="detalle-viaje h-100">
-                                            <h5 class="card-title mb-3">Teletransportación</h5>
-                                            <p class="card-text mb-3">Viaje bajo su propio riesgo.</p>
-                                            <p class="card-text mb-3"><small class="text-muted">Precio: $20,000,000</small></p>
+                                            <h5 class="card-title mb-3">Teletransportation</h5>
+                                            <p class="card-text mb-3">Travel at your own risk.</p>
+                                            <p class="card-text mb-3"><small class="text-muted">Price: $20,000,000</small></p>
                                         </div>
                                         <div class="contenedor-boton text-end">
-                                            <button class="btn btn-primary" id="seleccion-tipo-viaje" onclick="seleccionTipoViaje();">Seleccionar</button>
+                                            <button class="btn btn-primary" id="seleccion-viaje-teletransportacion" onclick="seleccionTipoViaje('teletransportacion');">Select</button>
                                         </div>
                                     </div>
                                 </div>
@@ -100,8 +100,15 @@
     </div>
     <div class="mb-4">
         <div class="text-end">
-            <button type="button" class="btn btn-secondary me-1" id="btn-retroceder" onclick="cambiarSeccion('tipo-viaje', 'seleccion-destino');">Retroceder</button>
-            <button type="button" class="btn btn-primary ms-1" id="btn-continuar" onclick="cambiarSeccion('tipo-viaje', 'seleccion-asientos');">Continuar</button>
+            <button type="button" class="btn btn-secondary me-1" id="btn-retroceder" onclick="cambiarSeccion('tipo-viaje', 'seleccion-destino');">Back</button>
+            <button type="button" class="btn btn-primary ms-1" id="btn-continuar-asientos" disabled onclick="cambiarSeccion('tipo-viaje', 'seleccion-asientos');">Continue</button>
         </div>
     </div>
 </div>
+
+<script>
+    
+    // Muestra valores del localstorage
+    muestraDetallesTipoViaje();
+
+</script>

@@ -86,32 +86,32 @@
               <div class="row mb-3">
                 <div class="col-md-12 col-lg-4 mb-2 mb-lg-0">
                   <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                      <label for="checkin_date" class="font-weight-bold text-black">Selecciona tu destino</label>
+                    <div class="col-12">
+                      <label for="checkin_date" class="font-weight-bold text-black">Choose your destiny</label>
+                    </div>
+                    <div class="col-md-12 col-lg-6 mb-3">
                       <select class="form-control" id="dato-origen">
-                        <option selected disabled>Origen</option>
-                        <option value="tierra">Tierra</option>
-                        <option value="marte">Marte</option>
-                        <option value="venus">Venus</option>
+                        <option selected disabled>From</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Venus">Venus</option>
                       </select>
                     </div>
                     <div class="col-md-12 col-lg-6">
-                      <label for="checkout_date" class="font-weight-bold text-black">&nbsp;</label>
                       <select class="form-control" id="dato-destino">
-                        <option selected disabled>Destino</option>
-                        <option value="venus">Venus</option>
-                        <option value="marte">Marte</option>
-                        <option value="tierra">Tierra</option>
-                        <option value="jupiter">Júpiter</option>
-                        <option value="saturno">Saturno</option>
+                        <option selected disabled>To</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Jupiter">Jupiter</option>
+                        <option value="Saturn">Saturn</option>
                       </select>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-12 col-lg-4 mb-3 mb-md-0">
-
-                  <label for="adults" class="font-weight-bold text-black">Ingresa las fechas</label>
-                  <div class="row">
+                  <label for="date" class="font-weight-bold text-black">Date</label>
+                  <div class="row mb-2">
                     <div class="col-6">
                       <input class="form-control w-100" type="date" id="fechaIda" min="2150-01-01" />
                     </div>
@@ -119,19 +119,13 @@
                       <input class="form-control w-100" type="date" id="fechaVuelta" min="2150-01-01" />
                     </div>
                   </div>
-
                 </div>
-
                 <div class="col-md-12 col-lg-2 mb-3 mb-md-0">
-                      
-                  <label for="children" class="font-weight-bold text-black">Total de asientos</label>
-                  <input class="form-control w-100" type="number" min="1" max="4" placeholder="No. de asientos">
-
+                  <label for="children" class="font-weight-bold text-black">Number of seats</label>
+                  <input class="form-control w-100" type="number" min="1" max="4" placeholder="Nu. of seats">
                 </div>
                 <div class="col-md-12 col-lg-2 mt-3 text-right" style="align-self: flex-end;">
-
-                  <button class="btn btn-azul btn-primary text-white" id="buscar-viaje" onclick="buscaTipoViaje();">Buscar viaje</button>
-
+                  <button class="btn btn-azul btn-primary text-white" id="buscar-viaje" onclick="buscaTipoViaje();">Search</button>
                 </div>
               </div>
               
