@@ -28,7 +28,7 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5><strong>Space X</strong></h5>
                                 <p><strong>Servicios de lanzamiento desde la Tierre, Marte y Venus.</strong></p> -->
-                                <button type="button" class="btn btn-primary" onclick="seleccionCompania();">Seleccionar</button>
+                                <button type="button" class="btn btn-primary" id="spacex" onclick="seleccionaCompania('spacex');">Seleccionar</button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -36,7 +36,7 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5><strong>AstraSpace</strong></h5>
                                 <p><strong>Servicios exclusivos de lanzamiento desde la Tierra.</strong></p> -->
-                                <button type="button" class="btn btn-primary" onclick="seleccionCompania();">Seleccionar</button>
+                                <button type="button" class="btn btn-primary" id="astra" onclick="seleccionaCompania('astra');">Seleccionar</button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -44,7 +44,7 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5><strong>Firefly Aerospace</strong></h5>
                                 <p><strong>Servicios exclusivos de lanzamiento desde Marte.</strong></p> -->
-                                <button type="button" class="btn btn-primary" onclick="seleccionCompania();">Seleccionar</button>
+                                <button type="button" class="btn btn-primary" id="firefly" onclick="seleccionaCompania('firefly');">Seleccionar</button>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
     </div>
     <div class="mb-4">
         <div class="text-end">
-            <button type="button" class="btn btn-primary" id="btn-continuar-seleccion-destino" onclick="cambiarSeccion('seleccion-destino', 'tipo-viaje');">Continuar</button>
+            <button type="button" class="btn btn-primary" id="btn-continuar-seleccion-destino" disabled onclick="cambiarSeccion('seleccion-destino', 'tipo-viaje');">Continuar</button>
         </div>
     </div>
 </div>
