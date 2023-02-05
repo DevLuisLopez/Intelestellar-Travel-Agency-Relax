@@ -22,8 +22,8 @@
 }
 
 .btn.btn-primary {
-    background-color: #ff0000;
-    border-color: #ff0000;
+    background-color: #0383C5;
+    border-color: #0383C5;
 }
 
 .btn.btn.btn-primary:hover {
@@ -38,7 +38,7 @@
 /* Breadcrumb */
 
 .breadcrumb-item.active {
-    color: #ff0000 !important;
+    color: #0383C5 !important;
 }
 
 /* Filtros */
@@ -267,7 +267,7 @@ ol {
     font-weight: bold;
     line-height: 1.5rem;
     padding: 4px 0;
-    background: #F42536;
+    background: #0383C5;
     color: white;
     border-radius: 5px;
     animation-duration: 300ms;
